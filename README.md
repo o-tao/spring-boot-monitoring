@@ -52,8 +52,8 @@ management:
 
 ```yaml
 global:
-  scrape_interval: 5s  # 스크랩 시간 간격을 5초로 설정
-  evaluation_interval: 5s # 판별 규칙 시간을 5초로 구성
+  scrape_interval: 5s
+  evaluation_interval: 5s
 
 scrape_configs:
   -   job_name: 'spring-boot-application'
