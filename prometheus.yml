@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 5s  # 스크랩 시간 간격을 5초로 설정
+  evaluation_interval: 5s # 판별 규칙 시간을 5초로 구성
+
+scrape_configs:
+  -   job_name: 'spring-boot-application'
+      metrics_path: '/actuator/prometheus'
+      static_configs:
+        -   targets: [ 'host.docker.internal:8080' ]
