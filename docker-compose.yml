@@ -1,0 +1,17 @@
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    container_name: prometheus
+
+  grafana:
+    image: "grafana/grafana:latest"
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin # 사용자 이름 설정
+      - GF_SECURITY_ADMIN_PASSWORD=1234 # 사용자 비밀번호 설정
+    container_name: grafana
