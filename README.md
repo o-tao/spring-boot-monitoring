@@ -18,6 +18,9 @@ implementation("org.springframework.boot:spring-boot-starter-web") // HTTP를 �
 implementation("org.springframework.boot:spring-boot-starter-actuator") // 애플리케이션의 성능과 상태를 모니터링할 수 있는 엔드포인트 제공
 runtimeOnly("io.micrometer:micrometer-registry-prometheus") // 메트릭 수집과 모니터링을 제공
 ```
+> micrometer란?   
+> 애플리케이션의 메트릭 데이터를 수집하고 다양한 모니터링 시스템과 연동할 수 있도록 지원하는 애플리케이션 메트릭 라이브러리 입니다.   
+> SpringBoot에서 기본적으로 Actuator와 통합되어 있으며, 다양한 모니터링 도구와 통합이 가능합니다.
 
 ## application.yml 설정
 
